@@ -115,8 +115,8 @@ static const Key keys[] = {
     { 0,                            XF86XK_AudioMute,          spawn,          SHCMD("wpctl set-mute @DEFAULT_SINK@ toggle") },
 	{ 0,                            XF86XK_AudioLowerVolume,   spawn,          SHCMD("wpctl set-volume @DEFAULT_SINK@ -5%") },
     { 0,                            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("wpctl set-volume @DEFAULT_SINK@ +5%") },
-    { 0,                            XF86XK_MonBrightnessUp,    spawn,          SHCMD("brightnessctl g +5%") },
-    { 0,                            XF86XK_MonBrightnessDown,  spawn,          SHCMD("brightnessctl g 5%-") },
+    { 0,                            XF86XK_MonBrightnessUp,    spawn,          SHCMD("brightnessctl set +5%") },
+    { 0,                            XF86XK_MonBrightnessDown,  spawn,          SHCMD("brightnessctl set 5%-") },
 };
 
 /* button definitions */
