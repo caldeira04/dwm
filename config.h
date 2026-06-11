@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx = 1; /* border pixel of windows */
@@ -111,6 +112,11 @@ static const Key keys[] = {
     {MODKEY, XK_p, spawn, {.v = mpcprev}},
     {MODKEY, XK_n, spawn, {.v = mpcnext}},
     {MODKEY, XK_space, spawn, {.v = mpctoggle}},
+    { 0,                            XF86XK_AudioMute,          spawn,          SHCMD("wpctl set-mute @DEFAULT_SINK@ toggle") },
+	{ 0,                            XF86XK_AudioLowerVolume,   spawn,          SHCMD("wpctl set-volume @DEFAULT_SINK@ -5%") },
+    { 0,                            XF86XK_AudioRaiseVolume,   spawn,          SHCMD("wpctl set-volume @DEFAULT_SINK@ +5%") },
+    { 0,                            XF86XK_MonBrightnessUp,    spawn,          SHCMD("brightnessctl g +5%") },
+    { 0,                            XF86XK_MonBrightnessDown,  spawn,          SHCMD("brightnessctl g 5%-") },
 };
 
 /* button definitions */
